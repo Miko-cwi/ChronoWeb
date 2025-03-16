@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChronoWorks Interactive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-section{
+            background: url('https://steamuserimages-a.akamaihd.net/ugc/911293473580001195/F37FC74CFB6F6D3F1033EAA531EAF1A9E76B3759/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false') no-repeat center center;
+            background-size: cover; /* Ajusta el tamaño */
+            height: 400px; /* Ajusta la altura de la sección */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Ajusta el 0.5 para hacer el fondo más oscuro o más claro */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+        }
+
+        .image-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #games .row {
+            display: flex;
+            justify-content: center; /* Centra si hay solo una card */
+            gap: 20px; /* Espacio entre cards */
+        }
+
+        #games .row > .col-md-4:first-child:nth-last-child(1) {
+            margin: auto; /* Centra si solo hay una card */
+        }
+
+        #games .row > .col-md-4:first-child:nth-last-child(n+2) {
+            margin-left: 0; /* Alinea a la izquierda si hay más de una */
+        }
+
+/* Estilo de la tarjeta */
+.game-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Asegura que ocupen bien el espacio */
+    max-width: 350px; /* Máximo ancho */
+    height: 500px; /* Altura fija para uniformidad */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Asegura que la imagen encaje bien */
+.game-card img {
+    width: 100%;
+    height: 200px; /* Mantiene las imágenes a una altura fija */
+    object-fit: cover; /* Evita que las imágenes se deformen */
+}
+
+.game-card .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+/* Hover effect sigue presente */
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.game-card:active {
+    transform: scale(0.98);
+}
+
+        body {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: "Poppins", sans-serif;
+            text-align: center;
+            color: #444;
+        }
+
+        h2 {
+            color: #6b5b95; /* Lavanda elegante */
+            font-weight: 600;
+        }
+
+        select {
+            background-color: #ffffff;
+            color: #6b5b95;
+            font-size: 16px;
+            border: 2px solid #b5a5d6;
+            border-radius: 8px;
+            padding: 10px 15px;
+            outline: none;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+
+        select:hover {
+            border-color: #7a6faa;
+            background-color: #f3f0ff;
+        }
+
+        button {
+            background-color: #6b5b95;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 20px;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+        }
+
+        button:hover {
+            background-color: #574b82;
+            transform: scale(1.05);
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/en/">ChronoWorks Interactive</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/en/">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./games/games.html">Our Games</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./downloads/downloads.html">Downloads</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./meetmiko/index.html">Meet Miko</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <header class="hero-section text-center py-5">
+        <div class="hero-content">
+            <h1>Welcome to ChronoWorks Interactive</h1>
+        </div>
+    </header>
+    
+    <!-- About Us -->
+    <section id="about" class="py-5">
+        <div class="container text-center">
+            <h2><b>About Us</b></h2>
+            <p>We want to become a benchmark in the video game industry for our deep narratives and immersive experiences; 
+                to design and develop games that inspire reflection, creativity, and emotional connection in players.
+            </p>
+
+            <h2 class="text-center">Download and read our <b>Bussines Plan</b></h2>
+        
+            <br>
+        
+            <a href="https://drive.google.com/uc?export=download&id=1FhZBqfr54e8J3YmCyvwmUw6GMnHi3iSM" download><button>📥 Download</button></a>
+            
+        </div>
+    </section>
+    
+    <!-- Games Showcase -->
+    <section id="games" class="bg-light py-5">
+        <div class="container text-center">
+            <h2><b>Our Games</b></h2>
+            <div class="row">
+                <div class="col-md-4 mt-3">
+                    <div class="card game-card" data-url="#">
+                        <img src="https://a.storyblok.com/f/178900/920x518/d1f739b3b4/magic-maker-how-to-make-magic-in-another-world-bridget.jpg/m/filters:quality(95)format(webp)" 
+                             class="card-img-top" 
+                             alt="Game 1">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>MG World Project</b></h5>
+                            <p class="card-text">
+                                In a world where magic dictates power and social status, those without magical abilities are rejected and marginalized.
+                                Freyja’s village is destroyed, exposing her firsthand to the luxuries and power that mages truly possess. 
+                                This drives her to seek change, both for herself and for her people.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-3">
+                    <div class="card game-card" data-url="#">
+                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a989b23f-5cca-47cc-88d1-3903e9a1bd82/dd40l5j-90d69ba5-dbca-4caa-a150-f62a696e5723.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E5ODliMjNmLTVjY2EtNDdjYy04OGQxLTM5MDNlOWExYmQ4MlwvZGQ0MGw1ai05MGQ2OWJhNS1kYmNhLTRjYWEtYTE1MC1mNjJhNjk2ZTU3MjMuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.2sgMU9xTwVpimFuouOiaHh9I2ZKP1u3Ys6tWxS09CN0" 
+                             class="card-img-top" 
+                             alt="Game 1">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>A Fabulously Bad Girl</b></h5>
+                            <p class="card-text">
+                                When a rival gang kidnaps her best friend, our fearless, rebellious heroine fights her way through the city’s most dangerous districts. 
+                                Armed with bats, pipes, and whatever she can get her hands on, she’ll take on eccentric gangs, deranged bosses, and brutal street brawls.
+                                Can she reach the gang leader and save her friend before it’s too late?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    <!-- Team Section -->
+    <section id="games" class="py-5">
+        <div class="container text-center">
+            <h2><b>Our Team</b></h2>
+            <p>Meet the minds behind our games.</p>
+            <div class="row">
+                <div class="col-md-3 mt-3">
+                    <div class="card game-card" data-url="https://ko-fi.com/naosenpai">
+                        <img src="https://i.pinimg.com/736x/20/74/ed/2074edcbda3327cbb60d635625828394.jpg" style="border-radius: 100%; height: 200px; width: 200px; margin-top: 10px;" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">Nao-Senpai</h5>
+                            <p class="card-text">The owner and creator of ChronoWorks Interactive.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mt-3">
+                    <div class="card game-card" data-url="https://ko-fi.com/nightriderarchive">
+                        <img src="https://storage.ko-fi.com/cdn/useruploads/9586d1af-f163-4665-b08b-9722ceec4f78_49a6bb1b-aa3e-4745-8480-962b2bbd6f96.png" style="border-radius: 100%; height: 200px; width: 200px; margin-top: 10px;" class="card-img-top" alt="Nightrider">
+                        <div class="card-body">
+                            <h5 class="card-title">Nightrider</h5>
+                            <p class="card-text">Texture Artist, Pixel Artist and local anarchist bad boy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 ChronoWorks Interactive. All rights reserved.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".game-card").forEach(card => {
+                card.addEventListener("click", function () {
+                    const url = this.getAttribute("data-url");
+                    if (url && url !== "#") {
+                        window.open(url, "_blank"); // Redirige si hay un link definido
+                    }
+                });
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.body.classList.add("loaded");
+        });
+
+        document.addEventListener("beforeunload", () => {
+            document.body.style.opacity = "0";
+        });
+        </script>
+</body>
+</html>

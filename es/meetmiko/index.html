@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conoce a Miko</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .miko-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: url('miko-background.jpg') center/cover fixed;
+        }
+        .miko-overlay {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 50px;
+            border-radius: 10px;
+            display: inline-block;
+            max-width: 600px;
+            position: relative;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .miko-img {
+            width: 400px;
+            animation: float 3s infinite ease-in-out;
+        }
+        .miko-quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="/es/">ChronoWorks Interactive</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/es/">Sobre Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/es/games/games.html">Nuestros Juegos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/es/downloads/downloads.html">Descargas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/es/meetmiko/index.html">Conoce a Miko</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/es/contact/contact.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="miko-section">
+        <div class="miko-overlay">
+            <h2>Conoce a Miko</h2>
+            <img src="./../../images/MikoTra.png" alt="Miko, la mascota del estudio" class="miko-img">
+            <p class="miko-quote">"¿Ya terminaste de trabajar o sigues perdiendo el tiempo?"</p>
+            <p>Miko es nuestra adorable pero estricta mascota. Puede parecer seria, pero en el fondo se preocupa por el estudio y sus juegos.</p>
+            <a href="https://x.com/Miko_cwi" target="_blank" class="btn btn-outline-light">Hablar con Miko</a>
+        </div>
+    </section>
+    
+    <footer class="text-center py-3 bg-dark">
+        <p>&copy; 2025 ChronoWorks Interactive. Todos los derechos reservados.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona tu idioma</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url('./images/MikoBG.png') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+
+        .modal-custom {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            width: 350px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.5s ease-in-out;
+            position: relative;
+        }
+
+        .modal-custom h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .btn-lang {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .btn-lang img {
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        .btn-es {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+            color: white;
+        }
+
+        .btn-en {
+            background: linear-gradient(45deg, #6b7bff, #53a8ff);
+            color: white;
+        }
+
+        .btn-lang:hover {
+            opacity: 0.8;
+        }
+
+        /* 🌸 Iconos de Sakura */
+        .sakura {
+            position: absolute;
+            top: -10px;
+            width: 30px;
+            animation: float 3s ease-in-out infinite alternate;
+        }
+
+        .sakura.left {
+            left: 20px;
+        }
+
+        .sakura.right {
+            right: 20px;
+        }
+
+        @keyframes float {
+            from { transform: translateY(0); }
+            to { transform: translateY(-5px); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Modal personalizado -->
+    <div class="modal-custom">
+        <button class="btn-lang btn-es" onclick="setLanguage('es')">
+            <img src="https://flagcdn.com/w40/es.png" alt="Español"> Español
+        </button>
+        <button class="btn-lang btn-en" onclick="setLanguage('en')">
+            <img src="https://flagcdn.com/w40/us.png" alt="English"> English
+        </button>
+    </div>
+
+    <script>
+        function setLanguage(lang) {
+            localStorage.setItem("selectedLanguage", lang);
+            window.location.href = `/${lang}/`;
+        }
+    </script>
+
+</body>
+</html>
