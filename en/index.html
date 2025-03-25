@@ -44,11 +44,21 @@
             align-items: center;
         }
 
-        #games .row {
+        #games .row, #team .row {
             display: flex;
-            justify-content: center; /* Centra si hay solo una card */
-            gap: 20px; /* Espacio entre cards */
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            flex-wrap: wrap; /* Permite que las tarjetas se acomoden abajo si no caben */
+            gap: 20px; /* Espacio entre las tarjetas */
         }
+
+        @media (max-width: 768px) {
+            .col-md-4,
+            .col-md-3 {
+                width: 100%; /* Forzar que ocupen todo el ancho */
+                max-width: 300px; /* No sean gigantes */
+        }
+    }
 
         #games .row > .col-md-4:first-child:nth-last-child(1) {
             margin: auto; /* Centra si solo hay una card */
@@ -59,39 +69,92 @@
         }
 
 /* Estilo de la tarjeta */
-.game-card {
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%; /* Asegura que ocupen bien el espacio */
-    max-width: 350px; /* Máximo ancho */
-    height: 500px; /* Altura fija para uniformidad */
-    display: flex;
-    flex-direction: column;
-}
+    .game-card {
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        max-width: 350px; /* Máximo ancho */
+        min-height: 450px; /* Altura fija para uniformidad */
+    }
+    .game-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    }
+    .game-card img {
+        border-radius: 50%;
+        height: 160px;
+        width: 160px;
+        object-fit: cover;
+        border: 4px solid white;
+    }
+    
+    .game-card .card-body {
+        padding: 20px;
+    }
+    .game-card .card-title {
+        font-weight: bold;
+        color: #343a40;
+    }
+    .game-card .card-text {
+        color: #6c757d;
+    }
+    .social-links a {
+        display: inline-block;
+        margin: 5px;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        line-height: 40px;
+        text-align: center;
+        transition: opacity 0.3s ease-in-out;
+    }
+    .social-links a:hover {
+        opacity: 0.8;
+    }
+    .game-card-games img {
+        width: 100%;
+        height: 170px; /* Mantiene las imágenes a una altura fija */
+        object-fit: cover; /* Evita que las imágenes se deformen */
+    }
 
-/* Asegura que la imagen encaje bien */
-.game-card img {
-    width: 100%;
-    height: 200px; /* Mantiene las imágenes a una altura fija */
-    object-fit: cover; /* Evita que las imágenes se deformen */
-}
+    .game-card-games {
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 100%; /* Asegura que ocupen bien el espacio */
+        max-width: 380px; /* Máximo ancho */
+        height: 630px; /* Altura fija para uniformidad */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Distribuye el contenido */
+    }
 
-.game-card .card-body {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-}
+    .game-card-games .card-body {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        text-align: justify;
+    }
 
-/* Hover effect sigue presente */
-.game-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
+    /* Hover effect sigue presente */
+    .game-card-games:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
 
-.game-card:active {
-    transform: scale(0.98);
-}
+    .game-card-games:active {
+        transform: scale(0.98);
+    }
+        body {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
 
         body {
             opacity: 0;
@@ -208,7 +271,7 @@
             <h2><b>Our Games</b></h2>
             <div class="row">
                 <div class="col-md-4 mt-3">
-                    <div class="card game-card" data-url="#">
+                    <div class="card game-card-games" data-url="#">
                         <img src="https://a.storyblok.com/f/178900/920x518/d1f739b3b4/magic-maker-how-to-make-magic-in-another-world-bridget.jpg/m/filters:quality(95)format(webp)" 
                              class="card-img-top" 
                              alt="Game 1">
@@ -223,7 +286,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 mt-3">
-                    <div class="card game-card" data-url="#">
+                    <div class="card game-card-games" data-url="#">
                         <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a989b23f-5cca-47cc-88d1-3903e9a1bd82/dd40l5j-90d69ba5-dbca-4caa-a150-f62a696e5723.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2E5ODliMjNmLTVjY2EtNDdjYy04OGQxLTM5MDNlOWExYmQ4MlwvZGQ0MGw1ai05MGQ2OWJhNS1kYmNhLTRjYWEtYTE1MC1mNjJhNjk2ZTU3MjMuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.2sgMU9xTwVpimFuouOiaHh9I2ZKP1u3Ys6tWxS09CN0" 
                              class="card-img-top" 
                              alt="Game 1">
@@ -241,35 +304,64 @@
         </div>
     </section>
     
-
-    
     <!-- Team Section -->
-    <section id="games" class="py-5">
+    <section id="team" class="py-5">
         <div class="container text-center">
             <h2><b>Our Team</b></h2>
             <p>Meet the minds behind our games.</p>
-            <div class="row">
-                <div class="col-md-3 mt-3">
-                    <div class="card game-card" data-url="https://ko-fi.com/naosenpai">
-                        <img src="https://i.pinimg.com/736x/20/74/ed/2074edcbda3327cbb60d635625828394.jpg" style="border-radius: 100%; height: 200px; width: 200px; margin-top: 10px;" class="card-img-top" alt="Nao-Senpai">
+            <div class="row justify-content-center">
+                <!-- Nao -->
+                <div class="col-12 col-md-3 mt-3">
+                    <div class="card game-card">
+                        <img src="https://i.pinimg.com/736x/20/74/ed/2074edcbda3327cbb60d635625828394.jpg" class="card-img-top" alt="Nao-Senpai" style="margin-top: 15px;">
                         <div class="card-body">
                             <h5 class="card-title">Nao-Senpai</h5>
                             <p class="card-text">The owner and creator of ChronoWorks Interactive.</p>
+                            <div class="social-links">
+                                <a href="https://ko-fi.com/naosenpai" style="background-color: #FF5E5B; margin-top: 15px;" target="_blank" >
+                                    <img src="./../images/kofi.webp" alt="Nao-Kofi" style="height: 60px; width: 60px;">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 mt-3">
-                    <div class="card game-card" data-url="https://ko-fi.com/nightriderarchive">
-                        <img src="https://storage.ko-fi.com/cdn/useruploads/9586d1af-f163-4665-b08b-9722ceec4f78_49a6bb1b-aa3e-4745-8480-962b2bbd6f96.png" style="border-radius: 100%; height: 200px; width: 200px; margin-top: 10px;" class="card-img-top" alt="Nightrider">
+                <!-- Saki -->
+                <div class="col-12 col-md-3 mt-3">
+                    <div class="card game-card">
+                        <img src="./../images/sakiicon.jpg" class="card-img-top" alt="Saki" style="margin-top: 15px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Saki</h5>
+                            <p class="card-text">The artist, creator, and father of Miko.</p>
+                            <div class="social-links">
+                                <a href="https://x.com/sakiend1" style="background-color: #1DA1F2; margin-top: 33px;" target="_blank">
+                                    <img src="./../images/Twitter-Emblem.png" alt="Saki-Twitter" style="height: 60px; width: 60px;">
+                                </a>
+                                <a href="https://www.facebook.com/saki.end.5" style="background-color: #197dff; margin-top: 33px;" target="_blank">
+                                    <img src="./../images/facebook.webp" alt="Saki-Facebook" style="height: 60px; width: 60px;">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Nightrider -->
+                <div class="col-12 col-md-3 mt-3">
+                    <div class="card game-card">
+                        <img src="https://storage.ko-fi.com/cdn/useruploads/9586d1af-f163-4665-b08b-9722ceec4f78_49a6bb1b-aa3e-4745-8480-962b2bbd6f96.png" class="card-img-top" alt="Nightrider" style="margin-top: 15px;">
                         <div class="card-body">
                             <h5 class="card-title">Nightrider</h5>
                             <p class="card-text">Texture Artist, Pixel Artist and local anarchist bad boy.</p>
+                            <div class="social-links">
+                                <a href="https://ko-fi.com/nightriderarchive" style="background-color: #FF5E5B;" target="_blank">
+                                    <img src="./../images/kofi.webp" alt="Nightrider-Kofi" style="height: 60px; width: 60px;">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 mt-3">
-                    <div class="card game-card" data-url="">
-                        <img src="./../images/Jim-hawkins-treasure-planet-33.9.webp" style="border-radius: 100%; height: 200px; width: 200px; margin-top: 10px;" class="card-img-top" alt="Shallowbucket32">
+                <!-- Shallowbucket32 -->
+                <div class="col-12 col-md-3 mt-3">
+                    <div class="card game-card">
+                        <img src="./../images/Jim-hawkins-treasure-planet-33.9.webp" class="card-img-top" alt="Shallowbucket32" style="margin-top: 15px;">
                         <div class="card-body">
                             <h5 class="card-title">Shallowbucket32</h5>
                             <p class="card-text">Prop creator for videogames. Junior 3D modeler. Junior 3D Sculptor.</p>
