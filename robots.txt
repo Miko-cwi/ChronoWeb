@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /admin/
+Crawl-delay: 5
+
+# Host
+Host: https://chronoworksinteractive.com
+
+# Sitemaps
+Sitemap: https://chronoworksinteractive.com/sitemap.xml
