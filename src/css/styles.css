@@ -1,0 +1,590 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.right-caption {
+    position: absolute;
+    top: 50%;
+    left: 5%; /* Aquí controlas qué tanto se separa del borde izquierdo */
+    transform: translateY(-50%);
+    width: 30%;
+    text-align: left;
+}
+
+.right-caption h1 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+
+.right-caption p {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 400;
+}
+
+.carousel {
+  position: relative;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.about-section {
+    background: #fdfdfd; /* Color muy claro, elegante y limpio */
+    font-family: 'Fredoka', sans-serif;
+}
+
+.about-title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #333;
+}
+
+.about-text {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    text-align: justify;
+}
+
+.nk-objectives-section {
+    background-color: #fafaff;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.nk-subtitle {
+    color: #a287f4;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nk-title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #222;
+    margin-top: 0.3rem;
+}
+
+.nk-description {
+    max-width: 700px;
+    font-size: 1rem;
+    color: #555;
+    margin-top: 1rem;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.nk-divider {
+    height: 4px;
+    width: 60px;
+    background-color: #a287f4;
+    border-radius: 2px;
+    margin-top: 1rem;
+}
+
+.nk-objective {
+    max-width: 260px;
+}
+
+.nk-objective h6 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.nk-objective p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 0;
+}
+
+.nk-icon {
+    font-size: 2rem;
+    color: #a287f4;
+}
+
+.nk-character {
+    max-height: 650px;
+    object-fit: contain;
+}
+
+.projects-section {
+  padding: 6rem 1rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+.section-header {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.section-subtitle {
+  font-size: 0.9rem;
+  color: #a259ff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2c2c2c;
+  margin-bottom: 0.5rem;
+}
+
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background-color: #a259ff;
+  margin: 0.5rem auto 1rem;
+  border-radius: 999px;
+}
+
+.section-description {
+  color: #666;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.project-card {
+  position: relative;
+  width: 400px;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(25, 0, 50, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-overlay button {
+  background-color: #fff;
+  color: #a259ff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.project-overlay button:hover {
+  background-color: #f2e6ff;
+}
+
+.character-center {
+  width: 160px;
+  height: auto;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.character-center img {
+  max-width: 100%;
+  height: auto;
+}
+
+.project-caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #a259ff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  z-index: 2;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+
+    .navbar {
+      padding: 1rem;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #a463ff;
+    }
+
+    .nav-link {
+      color: #555 !important;
+      margin-right: 10px;
+    }
+
+    .nav-link:hover {
+      color: #a463ff !important;
+    }
+
+    .btn-purple {
+      background-color: #a463ff;
+      color: white;
+      font-weight: bold;
+      border: none;
+    }
+
+    .btn-purple:hover {
+      background-color: #8b4fe0;
+    }
+
+    footer {
+      background-color: #121212;
+      color: #eee;
+      padding: 3rem 1rem;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #a463ff;
+    }
+
+    .footer-title {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .footer-icon {
+      color: #a463ff;
+      margin-right: 8px;
+    }
+
+    .social-icons a {
+      color: #a463ff;
+      margin-right: 10px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #333;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    .team-section {
+  background-color: #fdfcff;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.team-card {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+  text-align: center;
+  height: 100%;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #a259ff;
+}
+
+.team-name {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.team-role {
+  color: #a259ff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.team-desc {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+  .social-links a {
+    color: #555;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+
+  .social-links a:hover {
+    color: #007bff;
+  }
+
+  .conoce-a-miko-section {
+  background: #fff0f7;
+  border-top: 2px dashed #f3a1c3;
+  border-bottom: 2px dashed #f3a1c3;
+}
+
+.text-accent {
+  color: #e85d9e;
+}
+
+.miko-img {
+  max-height: 800px;
+  object-fit: contain;
+}
+
+.btn i {
+  vertical-align: middle;
+}
+
+.btn-custom:hover {
+  color: #fff !important; /* fuerza el texto blanco */
+}
+
+.btn-pink {
+  background-color: #ff69b4;
+  color: #fff;
+}
+
+.btn-pink:hover {
+  background-color: #e0559e;
+  color: #fff;
+}
+
+.videojuego-section {
+  background-color: #ffffff;
+  padding: 80px 20px;
+  color: #333;
+}
+
+.videojuego-section .section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.vg-block {
+  margin-bottom: 60px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vg-subtitle {
+  font-size: 2rem;
+  color: #ff589c;
+  margin-bottom: 20px;
+}
+
+.vg-block p,
+.vg-block ul {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.vg-block ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.art-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.art-gallery img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+/* --- ESTILOS PARA LA LISTA DE MECÁNICAS --- */
+.mechanics-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Espacio entre elementos */
+}
+
+.mechanic-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem; /* Espacio entre icono y texto */
+}
+
+.mechanic-item i {
+    font-size: 1.5rem; /* Tamaño del icono */
+    color: #a463ff;   /* Color principal de tu marca */
+    margin-top: 5px;
+}
+
+.mechanic-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.mechanic-item strong {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.mechanic-item span {
+    color: #555;
+    line-height: 1.5;
+}
+
+/* --- ESTILOS PARA LA GALERÍA DE ARTE --- */
+.art-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background-color: #fff;
+    height: 500px; /* Altura fija para uniformidad */
+    width: 640px; /* Ancho fijo para uniformidad */
+}
+
+.art-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(164, 99, 255, 0.2);
+}
+
+.art-card img {
+    width: 100%;
+    height: 100%; /* Altura fija para uniformidad */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+}
+
+/* --- ESTILOS PARA EL MODAL --- */
+#imageModal .modal-dialog {
+    max-width: 800px;
+}
+
+#imageModal .modal-content {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modalImage {
+    border-radius: 8px;
+    width: 100%;
+}
+
+/* Variables de colores (si aún las usas, aunque esta transición no las necesita directamente) */
+:root {
+    --color-principal-del-sitio: #2c3e50;
+}
+
+/* Estilos iniciales del contenedor de contenido si quieres una transición de entrada en la carga inicial */
+#main-content {
+    opacity: 0; /* Empieza invisible */
+    transform: translateY(20px); /* Ligeramente desplazado hacia abajo */
+    animation: fadeInSlideUp 0.7s ease-out forwards; /* Animación de entrada al cargar la página */
+}
+
+/* Animación de SALIDA: El contenido se desvanece y se desliza ligeramente hacia arriba */
+.content-fade-out {
+    animation: fadeOutSlideUp 0.7s ease-in forwards;
+}
+
+@keyframes fadeOutSlideUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px); /* Se desliza 20px hacia arriba */
+    }
+}
+
+/* Animación de ENTRADA: El contenido aparece desvaneciéndose y deslizándose desde abajo */
+.content-fade-in {
+    /* Esta clase se usa para pre-posicionar el contenido antes de la animación de entrada */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlideUp 0.7s ease-out forwards;
+}
+
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Empieza 20px hacia abajo */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px); /* Termina en su posición original */
+    }
+}

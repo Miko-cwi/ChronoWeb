@@ -1,160 +1,199 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selecciona tu idioma</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="icon" href="./images/CWI_Logo.png" type="image/x-icon">
-    <style>
-        body {
-            background: url('./images/MikoLaptop.png') no-repeat center center fixed;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            width: 100vw;
-            text-align: center;
-            font-family: 'Poppins', sans-serif;
-            color: white;
-            margin: 0;
-            overflow: hidden;
-            object-fit: cover; /* Evita espacios en blanco y deformaciones */
-        }
-
-        .modal-custom {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(12px);
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            max-width: 350px;
-            width: 100%;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            animation: fadeIn 0.5s ease-in-out;
-            position: relative;
-        }
-
-        .modal-custom h2 {
-            font-size: 22px;
-            margin-bottom: 20px;
-        }
-
-        .btn-lang {
-            width: 100%;
-            padding: 12px;
-            font-size: 18px;
-            border: none;
-            border-radius: 10px;
-            margin-top: 10px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
-
-        .btn-lang img {
-            width: 30px;
-            margin-right: 10px;
-        }
-
-        .btn-es {
-            background: linear-gradient(45deg, #ff6b6b, #ff8e53);
-            color: white;
-        }
-
-        .btn-en {
-            background: linear-gradient(45deg, #6b7bff, #53a8ff);
-            color: white;
-        }
-
-        .btn-lang:hover {
-            opacity: 0.8;
-        }
-
-        /* 🌸 Iconos de Sakura */
-        .sakura {
-            position: absolute;
-            top: -10px;
-            width: 30px;
-            animation: float 3s ease-in-out infinite alternate;
-        }
-
-        .sakura.left {
-            left: 20px;
-        }
-
-        .sakura.right {
-            right: 20px;
-        }
-
-        @keyframes float {
-            from { transform: translateY(0); }
-            to { transform: translateY(-5px); }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1); }
-        }
-
-        /* Responsividad */
-        @media (max-width: 576px) {
-            .modal-custom {
-                padding: 20px;
-                max-width: 90%;
-            }
-
-            .btn-lang {
-                font-size: 16px;
-                padding: 10px;
-            }
-        }
-
-        /* Tablets y pantallas medianas */
-@media (max-width: 1360px) {
-  body {
-    background-image: url('./images/MikoTablet.png');
-  }
-}
-
-/* Teléfonos grandes (pantallas de 768px o menos) */
-@media (max-width: 670px) {
-  body {
-    background-image: url('./images/MikoCelular.png');
-  }
-}
-
-/* Teléfonos pequeños (pantallas de 480px o menos) */
-@media (max-width: 480px) {
-  body {
-    background-image: url('./images/MikoCelularPeq.png');
-  }
-}
-    </style>
+    <title>ChronoWorks Interactive</title>
+    <link rel="stylesheet" href="./src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="./src/img/logo1.png" type="image/x-icon">
 </head>
 <body>
-    <!-- Modal personalizado -->
-    <div class="modal-custom">
-        <h2>Selecciona tu idioma</h2>
-        <button class="btn-lang btn-es" onclick="setLanguage('es')">
-            <img src="https://flagcdn.com/w40/es.png" alt="Español"> Español
-        </button>
-        <button class="btn-lang btn-en" onclick="setLanguage('en')">
-            <img src="https://flagcdn.com/w40/us.png" alt="English"> English
-        </button>
+    <main id="main-content">
+            <!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="#">ChronoWorks Interactive</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-center">
+        <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="./src/screens/nuestroequipo.html">Nuestro Equipo</a></li>
+        <li class="nav-item"><a class="nav-link" href="./src/screens/conoceMiko.html">Conoce a Miko</a></li>
+        <li class="nav-item"><a class="nav-link" href="./src/screens/anuncios.html">Anuncios</a></li>
+        <li class="nav-item ms-2">
+          <a class="btn btn-purple" href="https://www.youtube.com/@ChronoWorksInteractive" target="_blank">Ir al Canal</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <!-- Carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./src/img/MikoCard.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block right-caption text-start">
+                    <h1>¡Bienvenidos a ChronoWorks Interactive!</h1>
+                    <p style="text-align: justify; ">Somos un estudio que quiere convertirse en un referente en la industria de los videojuegos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sección Sobre Nosotros -->
+    <section class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+      
+      <!-- Imagen o Ilustración (puedes cambiar src) -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="./src/img/Engranaje.png" alt="Sobre Nosotros" class="img-fluid rounded-4" style="width: 70%;"                        >
+      </div>
+      
+      <!-- Texto -->
+      <div class="col-md-6">
+        <h2 class="about-title mb-3">Sobre Nosotros</h2>
+        <p class="about-text">
+          En <strong>ChronoWorks Interactive</strong> queremos convertirnos en un referente en la industria de los videojuegos por nuestras 
+          narrativas profundas y experiencias inmersivas; diseñar y desarrollar juegos que inspiren reflexión, creatividad y conexión emocional en los 
+          jugadores.
+        </p>
+        <p class="about-text">
+          Nuestro enfoque combina narrativas profundas, mecánicas significativas y una identidad visual única, todo con un toque de corazón. No buscamos hacer muchos juegos, buscamos hacer los <strong>juegos correctos</strong>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+    </section>
+
+    <!-- Sección Objetivos estilo NK -->
+<section class="nk-objectives-section py-5">
+  <div class="container text-center">
+    
+    <!-- Encabezado -->
+    <div class="mb-5">
+      <span class="nk-subtitle">🎯 Objetivos</span>
+      <h2 class="nk-title">Objetivos de ChronoWorks</h2>
+      <p class="nk-description mx-auto">
+        Nuestra meta es crear videojuegos con alma. Creemos en experiencias únicas, profundas y con identidad. Estos son los pilares que guían nuestro camino.
+      </p>
+      <div class="nk-divider mx-auto"></div>
     </div>
 
-    <script>
-        function setLanguage(lang) {
-            localStorage.setItem("selectedLanguage", lang);
-            window.location.href = `/${lang}/`;
-        }
-    </script>
+    <div class="row align-items-center">
+      
+      <!-- Columna izquierda -->
+      <div class="col-md-4 d-flex flex-column align-items-end gap-4 text-end">
+        <div class="nk-objective">
+          <i class="fas fa-layer-group nk-icon"></i>
+          <h6>Diversificación de Proyectos</h6>
+          <p>Explorar géneros variados y propuestas innovadoras para llegar a públicos distintos.</p>
+        </div>
+        <div class="nk-objective">
+          <i class="fas fa-handshake nk-icon"></i>
+          <h6>Colaboraciones</h6>
+          <p>Formar alianzas con artistas, desarrolladores y creadores con ideas afines.</p>
+        </div>
+        <div class="nk-objective">
+          <i class="fas fa-archive nk-icon"></i>
+          <h6>Archivo Creativo</h6>
+          <p>Documentar todo nuestro desarrollo para futuras referencias y aprendizajes.</p>
+        </div>
+      </div>
+
+      <!-- Imagen central -->
+      <div class="col-md-4 mb-4 mb-md-0">
+        <img src="./src/img/MikoDuda.png" alt="Miko" class="img-fluid nk-character">
+      </div>
+
+      <!-- Columna derecha -->
+      <div class="col-md-4 d-flex flex-column align-items-start gap-4 text-start">
+        <div class="nk-objective">
+          <i class="fas fa-music nk-icon"></i>
+          <h6>Calidad de Audio</h6>
+          <p>Cuidar la producción sonora de nuestros juegos para una experiencia envolvente.</p>
+        </div>
+        <div class="nk-objective">
+          <i class="fas fa-users nk-icon"></i>
+          <h6>Interacción con la Comunidad</h6>
+          <p>Escuchar a quienes nos siguen, adaptarnos y construir juntos.</p>
+        </div>
+        <div class="nk-objective">
+          <i class="fas fa-bolt nk-icon"></i>
+          <h6>Eventos y Actividad</h6>
+          <p>Organizar transmisiones, charlas y sesiones para compartir avances y conectar.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+
+<section class="projects-section">
+  <div class="section-header">
+    <p class="section-subtitle">📁 PROYECTOS DE CHRONOWORKS INTERACTIVE</p>
+    <h2 class="section-title">¿Cuáles son nuestros proyectos?</h2>
+    <div class="section-divider"></div>
+    <p class="section-description">Tenemos un proyecto en desarrollo.</p>
+  </div>
+
+  <div class="projects-grid">
+    <!-- Proyecto 1 -->
+    <div class="project-card">
+      <img src="./src/img/Nozomi.png" alt="Deadline">
+      <div class="project-caption">Deadline</div>
+      <div class="project-overlay">
+        <a href="./src/screens/deadline/deadline.html">
+        <button>Más información</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-md-3">
+        <div class="footer-title">ChronoWorks Interactive</div>
+        <p>Somos un estudio que quiere convertirse en un referente en la industria de los videojuegos.</p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/chronoworksinteractive/" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.youtube.com/@ChronoWorksInteractive" target="_blank"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="footer-title">Información</div>
+        <ul class="list-unstyled">
+          <li><i class="bi bi-geo-alt footer-icon"></i>México</li>
+          <li><i class="bi bi-envelope footer-icon"></i>miko@chronoworksinteractive.com</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <div class="footer-title">Personal</div>
+        <p>¡Estamos en busca de personal!</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Copyright © 2025 ChronoWorks Interactive. Todos los derechos reservados. | 
+      <a href="https://ko-fi.com/chronoworksinteractive" target="_blank">Donaciones</a> · 
+      <a href="https://discord.gg/s3sECQBJ9t" target="_blank">Comunidad</a>
+    </div>
+  </div>
+</footer>
 
 </body>
+<script src="./src/js/bootstrap.bundle.min.js"></script>
+<script src="./src/js/scripts.js"></script>
 </html>

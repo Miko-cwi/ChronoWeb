@@ -1,35 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Sitemap para chronoworksinteractive.com generado el 23-06-2025 -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <!-- Página principal con hreflang -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://chronoworksinteractive.com/</loc>
-    <lastmod>2025-06-23</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-07-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://chronoworksinteractive.com/es/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://chronoworksinteractive.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://chronoworksinteractive.com/"/>
   </url>
-
-  <!-- Versión en inglés -->
-  <url><loc>https://chronoworksinteractive.com/en/</loc></url>
-  <url><loc>https://chronoworksinteractive.com/en/contact/contact.html</loc></url>
-  <url><loc>https://chronoworksinteractive.com/en/downloads/downloads.html</loc></url>
-  <url><loc>https://chronoworksinteractive.com/en/games/</loc></url>
-  <url><loc>https://chronoworksinteractive.com/en/games/fbg.html</loc></url>
-  <url><loc>https://chronoworksinteractive.com/en/games/mwgp.html</loc></url>
-  <url><loc>https://chronoworksinteractive.com/en/meetmiko/</loc></url>
-
-  <!-- Versión en español -->
-  <url><loc>https://chronoworksinteractive.com/es/</loc></url>
-  <url><loc>https://chronoworksinteractive.com/es/contact/contact.html</loc></url>
-  <url><loc>https://chronoworksinteractive.com/es/downloads/downloads.html</loc></url>
-  <url><loc>https://chronoworksinteractive.com/es/games/</loc></url>
-  <url><loc>https://chronoworksinteractive.com/es/games/fbg.html</loc></url>
-  <url><loc>https://chronoworksinteractive.com/es/games/mwgp.html</loc></url>
-  <url><loc>https://chronoworksinteractive.com/es/meetmiko/</loc></url>
-
 </urlset>
-<!-- Fin del sitemap -->
