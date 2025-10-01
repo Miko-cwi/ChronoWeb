@@ -14,8 +14,7 @@
 </head>
 <body>
     <main id="main-content">
-            <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-white shadow-sm">
+            <nav class="navbar navbar-expand-lg bg-white shadow-sm">
   <div class="container">
     <a class="navbar-brand" href="#">ChronoWorks Interactive</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -35,29 +34,27 @@
   </div>
 </nav>
 
-    <!-- Carousel -->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="./src/img/MikoCard.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block right-caption text-start">
-                    <h1>¡Bienvenidos a ChronoWorks Interactive!</h1>
-                    <p style="text-align: justify; ">Somos un estudio que quiere convertirse en un referente en la industria de los videojuegos.</p>
+    <section class="hero-section">
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-lg-6 text-white hero-text">
+                    <h1 class="display-4 fw-bold">¡Bienvenidos a ChronoWorks Interactive!</h1>
+                    <p class="lead mt-3">Somos un estudio que quiere convertirse en un referente en la industria de los videojuegos.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="./src/img/MikoFeli.png" alt="Miko, la anfitriona de ChronoWorks Interactive" class="hero-character-img">
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Sección Sobre Nosotros -->
+    </section>
     <section class="about-section py-5">
         <div class="container">
             <div class="row align-items-center">
+    
+           <div class="col-md-6 mb-4 mb-md-0 text-center d-none d-md-block">
+               <img src="./src/img/Engranaje.png" alt="Sobre Nosotros" class="img-fluid rounded-4 about-image">
+           </div>
       
-      <!-- Imagen o Ilustración (puedes cambiar src) -->
-      <div class="col-md-6 mb-4 mb-md-0">
-        <img src="./src/img/Engranaje.png" alt="Sobre Nosotros" class="img-fluid rounded-4" style="width: 70%;"                        >
-      </div>
-      
-      <!-- Texto -->
       <div class="col-md-6">
         <h2 class="about-title mb-3">Sobre Nosotros</h2>
         <p class="about-text">
@@ -74,13 +71,11 @@
   </div>
     </section>
 
-    <!-- Sección Objetivos estilo NK -->
-<section class="nk-objectives-section py-5">
+    <section class="nk-objectives-section py-5">
   <div class="container text-center">
     
-    <!-- Encabezado -->
     <div class="mb-5">
-      <span class="nk-subtitle">🎯 Objetivos</span>
+      <span class="nk-subtitle">🎯 NUESTROS PILARES</span>
       <h2 class="nk-title">Objetivos de ChronoWorks</h2>
       <p class="nk-description mx-auto">
         Nuestra meta es crear videojuegos con alma. Creemos en experiencias únicas, profundas y con identidad. Estos son los pilares que guían nuestro camino.
@@ -90,7 +85,6 @@
 
     <div class="row align-items-center">
       
-      <!-- Columna izquierda -->
       <div class="col-md-4 d-flex flex-column align-items-end gap-4 text-end">
         <div class="nk-objective">
           <i class="fas fa-layer-group nk-icon"></i>
@@ -109,12 +103,10 @@
         </div>
       </div>
 
-      <!-- Imagen central -->
       <div class="col-md-4 mb-4 mb-md-0">
         <img src="./src/img/MikoDuda.png" alt="Miko" class="img-fluid nk-character">
       </div>
 
-      <!-- Columna derecha -->
       <div class="col-md-4 d-flex flex-column align-items-start gap-4 text-start">
         <div class="nk-objective">
           <i class="fas fa-music nk-icon"></i>
@@ -137,8 +129,6 @@
   </div>
 </section>
 
-<!-- PROYECTOS -->
-
 <section class="projects-section">
   <div class="section-header">
     <p class="section-subtitle">📁 PROYECTOS DE CHRONOWORKS INTERACTIVE</p>
@@ -146,26 +136,28 @@
     <div class="section-divider"></div>
     <p class="section-description">Tenemos un proyecto en desarrollo.</p>
   </div>
-
-  <div class="projects-grid">
-    <!-- Proyecto 1 -->
-    <div class="project-card">
-      <img src="./src/img/Nozomi.png" alt="Deadline">
-      <div class="project-caption">Deadline</div>
-      <div class="project-overlay">
-        <a href="./src/screens/deadline/deadline.html">
-        <button>Más información</button>
-        </a>
-      </div>
-    </div>
+  
+  <div class="container">
+    <div class="row justify-content-center g-4">
+        <div class="col-12 col-md-8 col-lg-5">
+            <div class="project-card">
+              <img src="./src/img/Nozomi.png" alt="Deadline">
+              <div class="project-caption">Deadline</div>
+              <div class="project-overlay">
+                <a href="./src/screens/deadline/deadline.html">
+                  <button>Más información</button>
+                </a>
+              </div>
+            </div>
+        </div>
+        </div>
   </div>
 </section>
     </main>
-    <!-- Footer -->
-<footer>
+    <footer>
   <div class="container">
     <div class="row justify-content-between">
-      <div class="col-md-3">
+      <div class="col-md-4 col-lg-3 mb-4 mb-md-0">
         <div class="footer-title">ChronoWorks Interactive</div>
         <p>Somos un estudio que quiere convertirse en un referente en la industria de los videojuegos.</p>
         <div class="social-icons">
@@ -173,14 +165,14 @@
           <a href="https://www.youtube.com/@ChronoWorksInteractive" target="_blank"><i class="bi bi-youtube"></i></a>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4 col-lg-3 mb-4 mb-md-0">
         <div class="footer-title">Información</div>
         <ul class="list-unstyled">
           <li><i class="bi bi-geo-alt footer-icon"></i>México</li>
           <li><i class="bi bi-envelope footer-icon"></i>miko@chronoworksinteractive.com</li>
         </ul>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4 col-lg-3 mb-4 mb-md-0">
         <div class="footer-title">Personal</div>
         <p>¡Estamos en busca de personal!</p>
       </div>
