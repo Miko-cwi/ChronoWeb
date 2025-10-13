@@ -176,7 +176,6 @@ main {
     object-fit: contain;
 }
 
-
 /* --- SECCIÓN PROYECTOS --- */
 .projects-section {
   padding: 6rem 1rem;
@@ -1107,7 +1106,7 @@ footer a:hover {
 .character-modal-img {
     width: 100%;
     /* La altura máxima será el 85% de la altura de la ventana */
-    max-height: 95vh; 
+    max-height: 100vh; 
     object-fit: contain; /* Asegura que la imagen completa se vea sin deformarse */
     border-radius: 16px 0 0 16px;
 }
@@ -1131,6 +1130,10 @@ footer a:hover {
 
 .color-protagonista {
     background-color: #d6585b;
+}
+
+.color-interesamoroso {
+    background-color: #D81B60;
 }
 
 /* Ajustes para móvil */
@@ -1171,3 +1174,79 @@ footer a:hover {
     color: #e0e0e0; /* Color principal para el valor */
     margin-top: 0.25rem;
 }
+
+.kofi-widget-container {
+  max-width: 400px; /* Ancho máximo para el widget, puedes ajustarlo */
+  margin: 0 auto; /* Esto centra el contenedor */
+  padding: 0 1rem; /* Un poco de espacio a los lados en móviles */
+}
+
+/* Estilos para el iframe dentro del contenedor */
+.kofi-widget-container iframe {
+  width: 100%;
+  border: none;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.miko-image-wrapper2 {
+  background-image: url('../img/MikoSorprendida.png');
+  
+  /* ¡Clave! Hace que la imagen llene por completo el div, recortando lo que sobre. */
+  background-size: cover; 
+  
+  /* ¡Clave! Alinea la imagen desde arriba, mostrando la cabeza y el torso. */
+  background-position: center top; 
+  
+  background-repeat: no-repeat;
+  
+  /* Ajusta esta altura para controlar qué tanto se 'corta' la imagen. */
+  min-height: 500px; 
+  
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+    /* Solo aplicamos las transformaciones en pantallas más grandes (tablets y escritorio) */
+    @media (min-width: 768px) {
+        /* Contenedor principal de los objetivos */
+        .nk-objectives-row {
+            position: relative;
+            /* Aumentamos el espacio vertical para que la curva no se sienta apretada */
+            padding: 2rem 0;
+        }
+
+        /* --- LADO IZQUIERDO --- */
+        .nk-objectives-section .objective-1 {
+            /* Mueve ARRIBA y se mantiene ADENTRO */
+            transform: translate(0, -75px);
+        }
+        .nk-objectives-section .objective-2 {
+            /* El del medio se mueve hacia AFUERA (izquierda) */
+            transform: translate(-50px, 0);
+        }
+        .nk-objectives-section .objective-3 {
+            /* Mueve ABAJO y se mantiene ADENTRO */
+            transform: translate(0, 75px);
+        }
+
+        /* --- LADO DERECHO --- */
+        .nk-objectives-section .objective-4 {
+            /* Mueve ARRIBA y se mantiene ADENTRO */
+            transform: translate(0, -75px);
+        }
+        .nk-objectives-section .objective-5 {
+            /* El del medio se mueve hacia AFUERA (derecha) */
+            transform: translate(50px, 0);
+        }
+        .nk-objectives-section .objective-6 {
+            /* Mueve ABAJO y se mantiene ADENTRO */
+            transform: translate(0, 75px);
+        }
+        
+        /* Transición suave para los movimientos */
+        .nk-objective {
+            transition: transform 0.4s ease-out;
+        }
+    }

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="httpshttps://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="shortcut icon" href="./../../img/logo1.png" type="image/x-icon">
 </head>
 <body class="game-page-theme">
@@ -28,6 +28,7 @@
                         <li class="nav-item"><a class="nav-link" href="./../nuestroequipo.html">Nuestro Equipo</a></li>
                         <li class="nav-item"><a class="nav-link" href="./../conoceMiko.html">Conoce a Miko</a></li>
                         <li class="nav-item"><a class="nav-link" href="./../anuncios.html">Anuncios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./apoyanos.html">Apoyanos</a></li>
                     </ul>
                 </div>
             </div>
@@ -71,49 +72,110 @@
             </div>
         </section>
 
-<section class="gallery-section py-5">
-    <div class="container">
-        <div class="row justify-content-center g-4">
+        <section class="gallery-section py-5">
+            <div class="container">
+                <div class="row justify-content-center g-4">
 
-            <div class="col-lg-4 col-md-6">
-                <div class="character-showcase-card">
-                    <div class="character-card-image">
-                        <img src="./../../img/NozomiRediseño.png" alt="Personaje Nozomi">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="character-showcase-card">
+                            <div class="character-card-image">
+                                <img src="./../../img/NozomiRediseño.png" alt="Personaje Nozomi" style="padding: 15px;">
+                            </div>
+                            <div class="character-card-content justify-content-center">
+                                <h4 class="character-name">Nozomi Miyashita</h4>
+                                <button type="button" class="btn btn-purple mt-4 mb-4" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#characterModal"
+                                    data-character-img="./../../img/NozomiRediseño.png"
+                                    data-character-name="Nozomi Miyashita"
+                                    data-character-role="Protagonista"
+                                    data-character-description="Nozomi es el alma de la aventura, una chica con el sentido del humor un tanto distorsionado que es alegre, optimista y confiable, cuando hay momentos de tensión deja mostrar esa faceta seria y tensa de ella, generalmente expresada en su rostro. <br><br>
+                                    Criada entre sus mejores amigos, Koji y Masao, Nozomi siempre se ha visto a sí misma como uno más del grupo, una hermana más que una chica. Esta dinámica la ha vuelto adorablemente lenta para captar las indirectas románticas que la rodean. Su lealtad es tan grande que, en su inocencia, ha llegado a pensar que la razón por la que sus amigos no tienen novia es porque son pareja entre ellos, sin darse cuenta de que, en realidad, ambos compiten por su afecto.<br><br>
+                                    Detrás de su fachada alegre, Nozomi carga con una herida compleja hacia su padre. En una trágica ironía, la misma enfermedad que consumía a su madre fue la que encendió en su padre una desesperada obsesión por controlar el tiempo. Aunque el propósito era encontrar una forma de salvarla, para Nozomi el resultado fue una doble pérdida: mientras la enfermedad se llevaba a su madre, los experimentos se llevaban a su padre. Lo culpa por haberle robado los últimos momentos preciosos en familia, dejándola con un nudo de resentimiento y un amor no admitido por el hombre que, a su manera, intentó desafiar al destino.<br><br>
+                                    Ahora, atrapada en una carrera contra el reloj gracias al peligroso legado de su padre, Nozomi deberá usar su optimismo como arma y su seriedad como escudo para intentar salvar no solo el tiempo, sino también las relaciones que más le importan."
+                                    data-character-height="163cm"
+                                    data-character-birthday="7 de Noviembre"
+                                    data-character-hobby="Coleccionista de Canciones. 
+                                    <br>Fanática de comprar ropa.
+                                    <br>Experimentar con compuestos.">
+                                    Ver Ficha Completa
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="character-card-content justify-content-center">
-                        <h4 class="character-name">Nozomi Miyashita</h4>
-                                    <button type="button" class="btn btn-purple mt-4 mb-4" 
-                    data-bs-toggle="modal" 
-                    data-bs-target="#characterModal"
-                    data-character-img="./../../img/NozomiRediseño.png"
-                    data-character-name="Nozomi Miyashita"
-                    data-character-role="Protagonista">
-                Ver Ficha Completa
-            </button>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="character-showcase-card">
+                            <div class="character-card-image">
+                                <img src="./../../img/Koji.png" alt="Personaje Koji" style="padding: 15px;">
+                            </div>
+                            <div class="character-card-content justify-content-center">
+                                <h4 class="character-name">Koji Ishida</h4>
+                                <button type="button" class="btn btn-purple mt-4 mb-4" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#characterModal"
+                                    data-character-img="./../../img/Koji.png"
+                                    data-character-name="Koji Ishida"
+                                    data-character-role="Personaje Principal"
+                                    data-character-role2="Interes Amoroso"
+                                    data-character-description="Koji es la personificación de la calma en medio de la tormenta. De carácter serio y reservado, su presencia es un ancla de confianza en los momentos más difíciles. Aunque su valentía es evidente, su mayor fortaleza radica en su afilada inteligencia y su afinidad por la tecnología, herramientas que utiliza para analizar cada situación y proteger a quienes le importan. A pesar de ser popular entre las chicas, sus ojos solo tienen una dirección: Nozomi. Su amor por ella es un fuego silencioso pero intenso, demostrado no con palabras, sino con actos de lealtad inquebrantable. <br><br>
+                                    Sin embargo, su fachada reservada es el escudo forjado por un pasado doloroso. Tras el divorcio de sus padres, Koji quedó bajo la custodia de un padre emocionalmente distante, pero su mundo se ensombreció aún más con la llegada de su madrastra. Bajo una máscara de normalidad, aquella mujer tejió una red de manipulación psicológica para quebrar su espíritu y autoestima, buscando convertirlo en una presa fácil para sus retorcidos deseos. Esta experiencia traumática lo encerró en sí mismo, generando una profunda desconfianza hacia los demás y una necesidad imperiosa de control. <br><br>
+                                    Hoy, Koji ve en Nozomi la luz que le fue negada durante años. Protegerla se ha convertido en su misión, una forma de redimirse y de asegurarse de que la oscuridad que lo marcó a él nunca la alcance a ella. Cada plan que traza y cada riesgo que calcula es un paso más para mantener a salvo el último vestigio de inocencia y calidez en su vida."
+                                    data-character-height="180cm"
+                                    data-character-birthday="14 de Marzo"
+                                    data-character-hobby="Aficionado a los videojuegos. <br>
+                                    Desarmar productos electrónicos. <br>">
+                                    Ver Ficha Completa
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="character-showcase-card">
+                            <div class="character-card-image">
+                                <img src="./../../img/Masao.png" alt="Personaje Koji" style="padding: 15px;">
+                            </div>
+                            <div class="character-card-content justify-content-center">
+                                <h4 class="character-name">Masao Takeuchi</h4>
+                                <button type="button" class="btn btn-purple mt-4 mb-4" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#characterModal"
+                                    data-character-img="./../../img/Masao.png"
+                                    data-character-name="Masao Takeuchi"
+                                    data-character-role="Personaje Principal"
+                                    data-character-role2="Interes Amoroso"
+                                    data-character-description='Si Koji es la calma, Masao es el torbellino. Un chico carismático y despreocupado que vive bajo el lema de "actuar primero, pensar después", lanzándose de cabeza a cualquier desafío que la vida le ponga enfrente. Su popularidad es innegable, pero la navega con una astucia que oculta tras una sonrisa juguetona, haciéndose el "sonso" para no complicarse la existencia. Es un espíritu libre, talentoso en los deportes y con un alma de músico, pero su mayor anhelo es simple: los cariños y la atención de Nozomi. <br><br>
+                                    A diferencia de sus amigos, Masao no carga con un pasado oscuro, pero su aparente simpleza esconde una lealtad tan feroz como la de Koji. Es increíblemente perceptivo y, aunque a menudo se le ve bromeando, sabe leer las emociones del grupo a la perfección. Entiende que a veces, más que un plan meticuloso, lo que se necesita es un empujón de optimismo o una distracción para aligerar la tensión. Su rivalidad con Koji por el afecto de Nozomi es amistosa pero real, representando un enfoque completamente distinto del amor: mientras Koji busca ser un escudo, Masao aspira a ser el sol que disipe las nubes.<br><br>
+                                    En la peligrosa carrera contra el tiempo, Masao es el corazón del equipo. Su lealtad incondicional es una promesa silenciosa de que, sin importar cuán imprudente pueda parecer, jamás le dará la espalda a sus amigos. Está dispuesto a arriesgarlo todo, no solo por el amor de Nozomi, sino por la convicción de que la amistad y la alegría son las armas más poderosas contra cualquier adversidad.'
+                                    data-character-height="178cm"
+                                    data-character-birthday="5 de Diciembre"
+                                    data-character-hobby="Jugar videojuegos. <br> Tocar la guitarra.">
+                                    Ver Ficha Completa
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="character-showcase-card placeholder-card">
+                            <div class="character-card-image">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <div class="character-card-content">
+                                <h4 class="character-name">Próximamente</h4>
+                                <p class="character-description">
+                                    Nuevos personajes serán revelados pronto. ¡Mantente al tanto de nuestras redes para no perderte ninguna noticia!
+                                </p>
+                                <button class="btn btn-purple mt-auto" disabled>No Disponible</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="character-showcase-card placeholder-card">
-                    <div class="character-card-image">
-                        <i class="fas fa-question-circle"></i>
-                    </div>
-                    <div class="character-card-content">
-                        <h4 class="character-name">Próximamente</h4>
-                        <p class="character-description">
-                            Nuevos personajes serán revelados pronto. ¡Mantente al tanto de nuestras redes para no perderte ninguna noticia!
-                        </p>
-                        <button class="btn btn-purple mt-auto" disabled>No Disponible</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
         
-
-        <section id="arte" class="gallery-section">
+<section id="arte" class="gallery-section">
             <div class="container">
                 <div class="text-center mb-5">
                     <h2 class="game-section-title">Galería de Arte</h2>
@@ -163,7 +225,7 @@
     </main>
     
     <footer>
-        </footer>
+    </footer>
 
     <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -175,8 +237,78 @@
         </div>
     </div>
     
+    <div class="modal fade" id="characterModal" tabindex="-1" aria-labelledby="characterModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content character-modal-content">
+                <div class="modal-body p-0">
+                    <div class="row g-0">
+                        <div class="col-lg-5">
+                            <img src="" id="modalCharacterImage" class="img-fluid character-modal-img" alt="Ficha de Personaje">
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="character-modal-info">
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <h2 class="character-name" id="modalCharacterName"></h2>
+                                <div class="d-flex mb-3 align-self-start">
+                                    <span class="badge color-protagonista me-2" id="modalCharacterRole"></span>
+                                    <span class="badge color-interesamoroso" id="modalCharacterRole2"></span>
+                                </div>
+                                <div id="modalCharacterDescription">
+                                    </div>
+
+                                <div class="character-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-label">Altura</span>
+                                        <span class="stat-value" id="modalCharacterHeight"></span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">Cumpleaños</span>
+                                        <span class="stat-value" id="modalCharacterBirthday"></span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-label">Hobby</span>
+                                        <span class="stat-value" id="modalCharacterHobby"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="./../../js/bootstrap.bundle.min.js"></script>
     <script>
+        // Script para el modal de personajes
+        const characterModal = document.getElementById('characterModal');
+        if (characterModal) {
+            characterModal.addEventListener('show.bs.modal', event => {
+                const button = event.relatedTarget;
+
+                // Extraer toda la información de los atributos data-*
+                const imgSrc = button.getAttribute('data-character-img');
+                const name = button.getAttribute('data-character-name');
+                const role = button.getAttribute('data-character-role');
+                const role2 = button.getAttribute('data-character-role2');
+                const description = button.getAttribute('data-character-description');
+                const height = button.getAttribute('data-character-height');
+                const birthday = button.getAttribute('data-character-birthday');
+                const hobby = button.getAttribute('data-character-hobby');
+
+                // Actualizar el contenido del modal
+                characterModal.querySelector('#modalCharacterImage').src = imgSrc;
+                characterModal.querySelector('#modalCharacterName').textContent = name;
+                characterModal.querySelector('#modalCharacterRole').textContent = role;
+                characterModal.querySelector('#modalCharacterRole2').textContent = role2;
+                characterModal.querySelector('#modalCharacterDescription').innerHTML = `<p>${description}</p>`;
+                characterModal.querySelector('#modalCharacterHeight').textContent = height;
+                characterModal.querySelector('#modalCharacterBirthday').textContent = birthday;
+                characterModal.querySelector('#modalCharacterHobby').innerHTML = hobby;
+            });
+        }
+
+        // Script para el modal de la galería
         const imageModal = document.getElementById('imageModal');
         if (imageModal) {
             imageModal.addEventListener('show.bs.modal', event => {
@@ -187,69 +319,5 @@
             });
         }
     </script>
-<div class="modal fade" id="characterModal" tabindex="-1" aria-labelledby="characterModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content character-modal-content">
-            <div class="modal-body p-0">
-                <div class="row g-0">
-                    <div class="col-lg-5">
-                        <img src="" id="modalCharacterImage" class="img-fluid character-modal-img" alt="Ficha de Personaje">
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="character-modal-info">
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                            <h2 class="character-name" id="modalCharacterName"></h2>
-                            <span class="badge color-protagonista mb-3 align-self-start" id="modalCharacterRole"></span>
-                            
-                            <div id="modalCharacterDescription">
-                                <p>
-                                    Nozomi es el alma de la aventura, una chica con el sentido del humor un tanto distorsionado que es alegre, optimista y confiable, cuando hay momentos de tensión deja mostrar esa faceta seria y tensa de ella, generalmente expresada en su rostro. <br><br>
-                                    Criada entre sus mejores amigos, Koji y Masao, Nozomi siempre se ha visto a sí misma como uno más del grupo, una hermana más que una chica. Esta dinámica la ha vuelto adorablemente lenta para captar las indirectas románticas que la rodean. Su lealtad es tan grande que, en su inocencia, ha llegado a pensar que la razón por la que sus amigos no tienen novia es porque son pareja entre ellos, sin darse cuenta de que, en realidad, ambos compiten por su afecto.<br><br>
-                                    Detrás de su fachada alegre, Nozomi carga con una herida compleja hacia su padre. En una trágica ironía, la misma enfermedad que consumía a su madre fue la que encendió en su padre una desesperada obsesión por controlar el tiempo. Aunque el propósito era encontrar una forma de salvarla, para Nozomi el resultado fue una doble pérdida: mientras la enfermedad se llevaba a su madre, los experimentos se llevaban a su padre. Lo culpa por haberle robado los últimos momentos preciosos en familia, dejándola con un nudo de resentimiento y un amor no admitido por el hombre que, a su manera, intentó desafiar al destino.<br><br>
-                                    Ahora, atrapada en una carrera contra el reloj gracias al peligroso legado de su padre, Nozomi deberá usar su optimismo como arma y su seriedad como escudo para intentar salvar no solo el tiempo, sino también las relaciones que más le importan.
-                                </p>
-
-                                <div class="character-stats">
-                                    <div class="stat-item">
-                                        <span class="stat-label">Altura</span>
-                                        <span class="stat-value">163cm</span>
-                                    </div>
-                                    <div class="stat-item">
-                                        <span class="stat-label">Cumpleaños</span>
-                                        <span class="stat-value">7 de Noviembre</span>
-                                    </div>
-                                    <div class="stat-item">
-                                        <span class="stat-label">Hobby</span>
-                                        <span class="stat-value">Coleccionar discos de música.<br>
-                                            Fanatica de comprar ropa.</span>
-                                    </div>
-                                </div>
-                                </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<script>
-    const characterModal = document.getElementById('characterModal');
-    if (characterModal) {
-        characterModal.addEventListener('show.bs.modal', event => {
-            // Botón que activó el modal
-            const button = event.relatedTarget;
-
-            // Extraer información de los atributos data-*
-            const imgSrc = button.getAttribute('data-character-img');
-            const name = button.getAttribute('data-character-name');
-            const role = button.getAttribute('data-character-role');
-
-            // Actualizar el contenido del modal
-            characterModal.querySelector('#modalCharacterImage').src = imgSrc;
-            characterModal.querySelector('#modalCharacterName').innerHTML = name;
-            characterModal.querySelector('#modalCharacterRole').innerHTML = role;
-        });
-    }
-</script>
 </body>
 </html>
