@@ -227,13 +227,15 @@ main {
   border-radius: 16px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
-  height: 280px; /* Altura fija para consistencia visual */
+  height: auto; /* Altura fija para consistencia visual */
+  width: auto;
 }
 
 .project-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: right center;
   display: block;
   transition: transform 0.4s ease;
 }
@@ -846,12 +848,12 @@ footer a:hover {
 
 /* Tema Oscuro para la Página */
 .game-page-theme {
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
 }
 
 .game-page-theme .navbar-dark {
-    background-color: rgba(18, 18, 18, 0.8) !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
     backdrop-filter: blur(10px);
 }
 
@@ -873,7 +875,7 @@ footer a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 0.2) 100%);
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.2) 100%);
 }
 
 .game-title {
@@ -883,6 +885,8 @@ footer a:hover {
     letter-spacing: 2px;
     position: relative;
     text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
 }
 
 .game-tagline {
@@ -894,24 +898,24 @@ footer a:hover {
 /* Secciones de Información y Galerías */
 .game-info-section {
     padding: 4rem 1rem;
-    background-color: #1a1a1a;
-    border-bottom: 1px solid #333;
+    background-color: var(--color-white);
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .gallery-section {
     padding: 4rem 1rem;
-    background-color: #121212;
+    background-color: var(--color-background);
 }
 
 .game-section-title {
     font-family: var(--font-primary);
     font-weight: 700;
-    color: var(--color-white);
+    color: var(--color-text-dark);
 }
 
 .game-section-text {
     font-family: var(--font-secondary);
-    color: #b0b0b0;
+    color: var(--color-text-light);
     line-height: 1.8;
 }
 
@@ -921,12 +925,12 @@ footer a:hover {
     font-family: var(--font-primary);
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #888;
+    color: var(--color-text-light);
 }
 
 .platform-list i {
     font-size: 2rem;
-    color: #b0b0b0;
+    color: var(--color-text-light);
     transition: color 0.3s ease;
 }
 
@@ -979,7 +983,7 @@ footer a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(18, 18, 18, 0.9) 0%, transparent 70%);
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.9) 0%, transparent 70%);
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -987,7 +991,7 @@ footer a:hover {
     opacity: 0;
     transition: opacity 0.4s ease;
     text-align: center;
-    color: var(--color-white);
+    color: var(--color-text-dark);
     font-family: var(--font-primary);
     font-weight: 600;
 }
@@ -998,7 +1002,7 @@ footer a:hover {
 
 .art-card .gallery-card-overlay {
     align-items: center; /* Centra el icono de zoom */
-    background: rgba(18,18,18,0.7);
+    background: rgba(255,255,255,0.7);
 }
 
 .art-card .gallery-card-overlay i {
@@ -1014,8 +1018,8 @@ footer a:hover {
 
 /* --- ESTILOS PARA TARJETAS DE PERSONAJE EN REJILLA --- */
 .character-showcase-card {
-    background-color: #222; /* Fondo oscuro para la tarjeta */
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: var(--color-white); /* Fondo claro para la tarjeta */
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 16px;
     overflow: hidden;
     height: 100%;
@@ -1061,7 +1065,7 @@ footer a:hover {
 }
 
 .character-card-content .character-description {
-    color: #b0b0b0;
+    color: var(--color-text-light);
     font-family: var(--font-secondary);
     font-size: 0.95rem;
     line-height: 1.6;
@@ -1071,7 +1075,7 @@ footer a:hover {
 /* --- ESTILOS PARA TARJETA PLACEHOLDER DE PERSONAJE --- */
 .placeholder-card {
     border-style: dashed; /* Borde punteado para indicar que es un borrador */
-    background-color: #1a1a1a; /* Un fondo ligeramente más apagado */
+    background-color: var(--color-background); /* Un fondo ligeramente más claro */
 }
 
 .placeholder-card .character-card-image {
@@ -1082,7 +1086,7 @@ footer a:hover {
 
 .placeholder-card .character-card-image i {
     font-size: 6rem; /* Icono grande */
-    color: rgba(255, 255, 255, 0.1); /* Icono muy sutil */
+    color: rgba(0, 0, 0, 0.1); /* Icono muy sutil */
 }
 
 .placeholder-card .character-name {
@@ -1097,8 +1101,8 @@ footer a:hover {
 
 /* --- ESTILOS PARA EL MODAL DE PERSONAJE (CORREGIDO) --- */
 .character-modal-content {
-    background-color: #222;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: var(--color-white);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 16px;
 }
 
@@ -1115,7 +1119,8 @@ footer a:hover {
 .character-modal-info {
     padding: 2.5rem;
     position: relative;
-    color: #e0e0e0;
+    color: #000000;
+    text-align: justify;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1151,7 +1156,7 @@ footer a:hover {
     text-align: center;
     margin-top: 2rem;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria sutil */
+    border-top: 1px solid rgba(0, 0, 0, 0.089); /* Línea divisoria sutil */
 }
 
 .stat-item {
@@ -1165,13 +1170,13 @@ footer a:hover {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #888; /* Color gris para la etiqueta */
+    color: #000000; /* Color gris para la etiqueta */
 }
 
 .stat-value {
     font-family: var(--font-secondary);
     font-size: 1.1rem;
-    color: #e0e0e0; /* Color principal para el valor */
+    color: #0064c2; /* Color principal para el valor */
     margin-top: 0.25rem;
 }
 
@@ -1250,3 +1255,118 @@ footer a:hover {
             transition: transform 0.4s ease-out;
         }
     }
+
+/* 1. El contenedor se adapta a la imagen */
+.game-hero-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    /* IMPORTANTE: Quitamos min-height y flexbox */
+    display: block; 
+}
+
+/* 2. La imagen ahora ocupa espacio real y marca la altura */
+.hero-background-image {
+    position: relative; /* Ya no es absolute */
+    display: block;     /* Evita espacios extra abajo */
+    width: 100%;
+    height: auto;       /* Esto mantiene la proporción original */
+    z-index: 1;
+    filter: brightness(0.6); 
+}
+
+/* 3. El overlay oscuro acompaña a la imagen */
+.game-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8));
+    z-index: 2;
+}
+
+/* 4. El texto flota ENCIMA de la imagen */
+.game-hero-section .container {
+    position: absolute;  /* Flota sobre la imagen */
+    top: 50%;            /* Baja a la mitad */
+    left: 50%;           /* Mueve a la derecha a la mitad */
+    transform: translate(-50%, -50%); /* Centrado matemático perfecto */
+    z-index: 5;
+    width: 100%;
+    text-align: center;
+}
+
+.support-hero {
+  background-color: #524061;
+  background-image: 
+    radial-gradient(circle at 70% 50%, rgba(229, 128, 255, 0.25) 0%, transparent 45%),
+    url('../img/fondo-morado.png');
+}
+
+.support-miko {
+  max-height: 800px;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.support-pillars {
+  background: #f6f6fb;
+  color: #222;
+}
+
+.support-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.08);
+  transition: transform .3s;
+}
+
+.support-card:hover {
+  transform: translateY(-8px);
+}
+
+.support-card i {
+  font-size: 2.5rem;
+  color: #6a4cff;
+  margin-bottom: 1rem;
+}
+
+.kofi-section {
+  background: linear-gradient(120deg, #1e1e2f, #121212);
+}
+
+.kofi-box {
+  max-width: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,.4);
+}
+
+.card.featured {
+  border: 2px solid #6a4cff;
+  transform: scale(1.05);
+}
+
+.kofi-light {
+  background: #f6f6fb;
+  color: #222;
+}
+
+.kofi-light .section-title,
+.kofi-light .section-subtitle {
+  color: #222;
+}
+
+.kofi-light .lead {
+  color: #555 !important;
+}
+
+.kofi-light .kofi-box {
+  box-shadow: 0 20px 40px rgba(0,0,0,.12);
+}

@@ -6,39 +6,51 @@
     <title>Deadline - ChronoWorks Interactive</title>
     <meta name="description" content="Descubre Deadline, una aventura donde el tiempo está en tu contra. Conoce a los personajes, explora el arte conceptual y mantente al día con el desarrollo.">
     
-    <link rel="stylesheet" href="./../../css/bootstrap.min.css">
-    <link rel="stylesheet" href="./../../css/styles.css">
+    <link rel="stylesheet" href="./../src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../src/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="shortcut icon" href="./../../img/logo1.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./../src/img/logo1.png" type="image/x-icon">
 </head>
 <body class="game-page-theme">
     <main id="main-content">
-        <nav class="navbar navbar-expand-lg bg-dark shadow-sm navbar-dark fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">ChronoWorks Interactive</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav align-items-center">
-                        <li class="nav-item"><a class="nav-link" href="./../../../index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./../nuestroequipo.html">Nuestro Equipo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./../conoceMiko.html">Conoce a Miko</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./../anuncios.html">Anuncios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./apoyanos.html">Apoyanos</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="/">ChronoWorks Interactive</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-center">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/nuestroequipo/">Nuestro Equipo</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="/conoceamiko/">Conoce a Miko</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/anuncios/">Anuncios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/apóyanos/">Apóyanos</a>
+        </li>
+        <li class="nav-item ms-2">
+          <a class="btn btn-purple" href="https://www.youtube.com/@ChronoWorksInteractive" target="_blank">Ir al Canal</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+    </nav>
 
         <section class="game-hero-section">
             <div class="game-hero-overlay"></div>
+            <img src="./../src/img/DeadlineBG2.png" alt="" class="hero-background-image">
             <div class="container text-center text-white">
                 <h1 class="game-title">DEADLINE</h1>
-                <p class="game-tagline">Una aventura donde el tiempo está en tu contra.</p>
             </div>
         </section>
 
@@ -79,14 +91,14 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="character-showcase-card">
                             <div class="character-card-image">
-                                <img src="./../../img/NozomiRediseño.png" alt="Personaje Nozomi" style="padding: 15px;">
+                                <img src="./../src/img/NozomiF.png" alt="Personaje Nozomi" style="padding: 15px;">
                             </div>
                             <div class="character-card-content justify-content-center">
                                 <h4 class="character-name">Nozomi Miyashita</h4>
                                 <button type="button" class="btn btn-purple mt-4 mb-4" 
                                     data-bs-toggle="modal" 
                                     data-bs-target="#characterModal"
-                                    data-character-img="./../../img/NozomiRediseño.png"
+                                    data-character-img="./../src/img/NozomiF.png"
                                     data-character-name="Nozomi Miyashita"
                                     data-character-role="Protagonista"
                                     data-character-description="Nozomi es el alma de la aventura, una chica con el sentido del humor un tanto distorsionado que es alegre, optimista y confiable, cuando hay momentos de tensión deja mostrar esa faceta seria y tensa de ella, generalmente expresada en su rostro. <br><br>
@@ -107,14 +119,14 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="character-showcase-card">
                             <div class="character-card-image">
-                                <img src="./../../img/Koji.png" alt="Personaje Koji" style="padding: 15px;">
+                                <img src="./../src/img/Koji.png" alt="Personaje Koji" style="padding: 15px;">
                             </div>
                             <div class="character-card-content justify-content-center">
                                 <h4 class="character-name">Koji Ishida</h4>
                                 <button type="button" class="btn btn-purple mt-4 mb-4" 
                                     data-bs-toggle="modal" 
                                     data-bs-target="#characterModal"
-                                    data-character-img="./../../img/Koji.png"
+                                    data-character-img="./../src/img/Koji.png"
                                     data-character-name="Koji Ishida"
                                     data-character-role="Personaje Principal"
                                     data-character-role2="Interes Amoroso"
@@ -134,14 +146,14 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="character-showcase-card">
                             <div class="character-card-image">
-                                <img src="./../../img/Masao.png" alt="Personaje Koji" style="padding: 15px;">
+                                <img src="./../src/img/Masao.png" alt="Personaje Koji" style="padding: 15px;">
                             </div>
                             <div class="character-card-content justify-content-center">
                                 <h4 class="character-name">Masao Takeuchi</h4>
                                 <button type="button" class="btn btn-purple mt-4 mb-4" 
                                     data-bs-toggle="modal" 
                                     data-bs-target="#characterModal"
-                                    data-character-img="./../../img/Masao.png"
+                                    data-character-img="./../src/img/Masao.png"
                                     data-character-name="Masao Takeuchi"
                                     data-character-role="Personaje Principal"
                                     data-character-role2="Interes Amoroso"
@@ -184,37 +196,37 @@
                 <div class="row g-4">
                     <div class="col-md-6 col-lg-4">
                         <div class="gallery-card art-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="./../../img/Nozomi.png">
-                            <img src="./../../img/Nozomi.png" class="img-fluid" alt="Arte de Nozomi">
+                            <img src="./../src/img/Nozomi.png" class="img-fluid" alt="Arte de Nozomi">
                             <div class="gallery-card-overlay"><i class="fas fa-search-plus"></i></div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="gallery-card art-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="./../../img/Nozomi Concepto 1.png">
-                            <img src="./../../img/Nozomi Concepto 1.png" class="img-fluid" alt="Concepto de Nozomi">
+                            <img src="./../src/img/Nozomi Concepto 1.png" class="img-fluid" alt="Concepto de Nozomi">
                             <div class="gallery-card-overlay"><i class="fas fa-search-plus"></i></div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="gallery-card art-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="./../../img/Nozomi Concepto 2.png">
-                            <img src="./../../img/Nozomi Concepto 2.png" class="img-fluid" alt="Arte de Nozomi">
+                            <img src="./../src/img/Nozomi Concepto 2.png" class="img-fluid" alt="Arte de Nozomi">
                             <div class="gallery-card-overlay"><i class="fas fa-search-plus"></i></div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="gallery-card art-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="./../../img/MapaConcepto.png">
-                            <img src="./../../img/MapaConcepto.png" class="img-fluid" alt="Concepto del Mapa">
+                            <img src="./../src/img/MapaConcepto.png" class="img-fluid" alt="Concepto del Mapa">
                             <div class="gallery-card-overlay"><i class="fas fa-search-plus"></i></div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="gallery-card art-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="./../../img/CiudadConcepto.png">
-                            <img src="./../../img/CiudadConcepto.png" class="img-fluid" alt="Concepto de la Ciudad">
+                            <img src="./../src/img/CiudadConcepto.png" class="img-fluid" alt="Concepto de la Ciudad">
                             <div class="gallery-card-overlay"><i class="fas fa-search-plus"></i></div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="gallery-card art-card" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="./../../img/NozomiPuebloConcepto.png">
-                            <img src="./../../img/NozomiPuebloConcepto.png" class="img-fluid" alt="Concepto de Nozomi en el pueblo">
+                            <img src="./../src/img/NozomiPuebloConcepto.png" class="img-fluid" alt="Concepto de Nozomi en el pueblo">
                             <div class="gallery-card-overlay"><i class="fas fa-search-plus"></i></div>
                         </div>
                     </div>
@@ -278,7 +290,7 @@
         </div>
     </div>
 
-    <script src="./../../js/bootstrap.bundle.min.js"></script>
+    <script src="./../src/js/bootstrap.bundle.min.js"></script>
     <script>
         // Script para el modal de personajes
         const characterModal = document.getElementById('characterModal');
